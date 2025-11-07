@@ -1,0 +1,138 @@
+/* General Reset and Base */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('background.png');
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative; /* needed for overlay */
+}
+
+/* Background Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* Main Container above overlay */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 720px;
+  padding: 24px;
+}
+
+/* Heading */
+h1 {
+  color: #FFFFFF;
+  font-size: 2.75rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+
+/* Buttons Wrapper */
+.buttons {
+  width: 100%;
+}
+
+/* Button Base */
+.btn {
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  margin: 15px auto;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Primary Button */
+.btn-main {
+  background-color: #0D47A1; /* government-like blue */
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.btn-main:hover {
+  background-color: #004085;
+  transform: scale(1.03);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #53595e;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background-color: #a4a8ab;
+  transform: scale(1.03);
+}
+
+/* Sub Buttons Container */
+.sub-buttons {
+  width: 100%;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sub-buttons .btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  max-width: 350px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 90%;
+  }
+}
+
+/* (embed modal dihapus) */
+
+
