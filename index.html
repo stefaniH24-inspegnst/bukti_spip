@@ -13,7 +13,14 @@
   </head>
   <body>
     <main class="container">
-      <h1>BUKTI CERDAS SPIP</h1>
+      <div class="header-with-icon">
+        <h1>BUKTI CERDAS SPIP</h1>
+        <button class="video-tutorial-icon-btn" id="video-tutorial-icon-btn" title="Video Tutorial">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
 
       <div class="buttons">
         
@@ -49,7 +56,33 @@
         </div>
                 
       </div>
+
     </main>
+
+    <!-- Floating Video Tutorial Button -->
+    <button class="video-tutorial-float-btn" id="video-tutorial-float-btn" title="Video Tutorial Penggunaan Website">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="currentColor"/>
+      </svg>
+      <span class="float-btn-text">Tutorial</span>
+    </button>
+
+    <!-- Video Tutorial Modal -->
+    <div class="video-modal" id="video-modal" style="display: none;">
+      <div class="video-modal-content">
+        <button class="video-modal-close" id="video-modal-close">&times;</button>
+        <h2>Video Tutorial Penggunaan Website</h2>
+        <div class="video-container">
+          <iframe 
+            id="youtube-video"
+            src="" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
 
     <!-- QR Code -->
     <img src="qrcode.png" alt="QR Code" class="qrcode" />
